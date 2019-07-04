@@ -12,7 +12,7 @@ import Foundation
 class Producer {
     
     var producerID: Int
-    private var productsName = ["Chocolate","Meat","Drink","Laptop","Pencil"]
+    private var productsName = ["Chocolate","Meat","Drink","Flower","Pencil"]
     private var productionTimer: Timer?
     
     weak var delegate: MarketManagerDelegate?

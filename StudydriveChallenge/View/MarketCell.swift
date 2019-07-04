@@ -17,6 +17,7 @@ class MarketCell: UITableViewCell {
             guard let product = product else {return}
             IDLabel.text = String(product.producerId)
             productNameLabel.text = product.productName
+            productImage.image = UIImage(named: product.productName)
         }
     }
     
@@ -67,6 +68,14 @@ class MarketCell: UITableViewCell {
         return label
     }()
     
+    private var productImage: UIImageView = {
+        let imgview = UIImageView()
+        imgview.translatesAutoresizingMaskIntoConstraints = false
+        imgview.contentMode = .scaleAspectFill
+        imgview.clipsToBounds = true
+        imgview.layer.cornerRadius = 20
+        return imgview
+    }()
     
     
     
@@ -87,7 +96,7 @@ class MarketCell: UITableViewCell {
     private func SetUpViewsAndConstraints(){
         selectionStyle = .none
         addSubview(containerView)
-        containerView.addMultipleSubViews(producerLabel, IDLabel, separator, productLabel, productNameLabel)
+        containerView.addMultipleSubViews(producerLabel, IDLabel, separator, productLabel, productNameLabel, productImage)
         
         let spacing: CGFloat = 7
         
@@ -113,7 +122,7 @@ class MarketCell: UITableViewCell {
         
         productLabel.topAnchor.constraint(equalTo: producerLabel.topAnchor).isActive = true
         productLabel.leftAnchor.constraint(equalTo: separator.rightAnchor).isActive = true
-        productLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        productLabel.rightAnchor.constraint(equalTo: productImage.leftAnchor).isActive = true
         productLabel.heightAnchor.constraint(equalTo: producerLabel.heightAnchor).isActive = true
         
         productNameLabel.centerXAnchor.constraint(equalTo: productLabel.centerXAnchor).isActive = true
@@ -121,6 +130,10 @@ class MarketCell: UITableViewCell {
         productNameLabel.widthAnchor.constraint(equalTo: productLabel.widthAnchor).isActive = true
         productNameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -spacing).isActive = true
         
+        productImage.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        productImage.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        productImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        productImage.widthAnchor.constraint(equalTo: productImage.heightAnchor).isActive = true
     }
 
 }

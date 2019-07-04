@@ -9,13 +9,7 @@
 import Foundation
 
 
-class Product {
-    var producerId: Int
-    var productName: String
-    
-    init (producerId: Int, productName: String) {
-        self.producerId = producerId
-        self.productName = productName
-    }
-    
+struct Product {
+    let producerId: Int
+    let productName: String 
 }

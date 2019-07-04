@@ -21,6 +21,9 @@
 		1258D5ED22CE70C10005474A /* Producer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5EC22CE70C10005474A /* Producer.swift */; };
 		1258D5EF22CE81120005474A /* InfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5EE22CE81120005474A /* InfoLabel.swift */; };
 		1258D5F222CE857B0005474A /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5F122CE857B0005474A /* Themes.swift */; };
+		1258D5F422CEA0DC0005474A /* TableViewDelegateFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5F322CEA0DC0005474A /* TableViewDelegateFunction.swift */; };
+		1258D5F722CEA29C0005474A /* MarketManagerDelegateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5F622CEA29C0005474A /* MarketManagerDelegateFunctions.swift */; };
+		1258D5F922CEA2F60005474A /* ConstraintsMarketExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5F822CEA2F60005474A /* ConstraintsMarketExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		1258D5EC22CE70C10005474A /* Producer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producer.swift; sourceTree = "<group>"; };
 		1258D5EE22CE81120005474A /* InfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabel.swift; sourceTree = "<group>"; };
 		1258D5F122CE857B0005474A /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		1258D5F322CEA0DC0005474A /* TableViewDelegateFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegateFunction.swift; sourceTree = "<group>"; };
+		1258D5F622CEA29C0005474A /* MarketManagerDelegateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketManagerDelegateFunctions.swift; sourceTree = "<group>"; };
+		1258D5F822CEA2F60005474A /* ConstraintsMarketExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsMarketExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				1258D5B122CE51DE0005474A /* MarketViewController.swift */,
+				1258D5F522CEA2720005474A /* MarketViewControllerExtensions */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +199,16 @@
 				1258D5F122CE857B0005474A /* Themes.swift */,
 			);
 			path = Themes;
+			sourceTree = "<group>";
+		};
+		1258D5F522CEA2720005474A /* MarketViewControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				1258D5F322CEA0DC0005474A /* TableViewDelegateFunction.swift */,
+				1258D5F622CEA29C0005474A /* MarketManagerDelegateFunctions.swift */,
+				1258D5F822CEA2F60005474A /* ConstraintsMarketExtension.swift */,
+			);
+			path = MarketViewControllerExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1258D5EF22CE81120005474A /* InfoLabel.swift in Sources */,
+				1258D5F422CEA0DC0005474A /* TableViewDelegateFunction.swift in Sources */,
 				1258D5B222CE51DE0005474A /* MarketViewController.swift in Sources */,
 				1258D5E922CE6FF70005474A /* MarketManagerProtocol.swift in Sources */,
 				1258D5F222CE857B0005474A /* Themes.swift in Sources */,
@@ -333,6 +351,8 @@
 				1258D5E622CE62F20005474A /* Product.swift in Sources */,
 				1258D5ED22CE70C10005474A /* Producer.swift in Sources */,
 				1258D5E122CE60080005474A /* MarketCell.swift in Sources */,
+				1258D5F722CEA29C0005474A /* MarketManagerDelegateFunctions.swift in Sources */,
+				1258D5F922CEA2F60005474A /* ConstraintsMarketExtension.swift in Sources */,
 				1258D5B022CE51DE0005474A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
