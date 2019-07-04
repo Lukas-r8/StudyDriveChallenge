@@ -16,7 +16,7 @@ class MarketCell: UITableViewCell {
         didSet {
             guard let product = product else {return}
             IDLabel.text = String(product.producerId)
-            productLabel.text = product.productName
+            productNameLabel.text = product.productName
         }
     }
     
@@ -34,12 +34,14 @@ class MarketCell: UITableViewCell {
     private var producerLabel: UILabel = {
         let label = UILabel()
         label.basicSetUp("Producer ID:")
+        label.font = FontsTheme.labelFont
         return label
     }()
     
     private var IDLabel: UILabel = {
         let label = UILabel()
         label.basicSetUp()
+        label.font = FontsTheme.infoFont
         return label
     }()
     
@@ -54,12 +56,14 @@ class MarketCell: UITableViewCell {
     private var productLabel: UILabel = {
         let label = UILabel()
         label.basicSetUp("Product:")
+        label.font = FontsTheme.labelFont
         return label
     }()
 
     private var productNameLabel: UILabel = {
         let label = UILabel()
         label.basicSetUp()
+        label.font = FontsTheme.infoFont
         return label
     }()
     
@@ -81,6 +85,7 @@ class MarketCell: UITableViewCell {
     
     // setting up constraints for view and adding them to superview....
     private func SetUpViewsAndConstraints(){
+        selectionStyle = .none
         addSubview(containerView)
         containerView.addMultipleSubViews(producerLabel, IDLabel, separator, productLabel, productNameLabel)
         
@@ -88,12 +93,12 @@ class MarketCell: UITableViewCell {
         
         containerView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         containerView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        containerView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8).isActive = true
-        containerView.heightAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1/3).isActive = true
+        containerView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9).isActive = true
+        containerView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8).isActive = true
         
         producerLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: spacing).isActive = true
         producerLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
-        producerLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.4).isActive = true
+        producerLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.32).isActive = true
         producerLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         IDLabel.centerXAnchor.constraint(equalTo: producerLabel.centerXAnchor).isActive = true

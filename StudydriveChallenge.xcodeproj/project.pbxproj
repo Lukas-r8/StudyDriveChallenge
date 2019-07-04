@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1258D5B022CE51DE0005474A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5AF22CE51DE0005474A /* AppDelegate.swift */; };
-		1258D5B222CE51DE0005474A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5B122CE51DE0005474A /* ViewController.swift */; };
+		1258D5B222CE51DE0005474A /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5B122CE51DE0005474A /* MarketViewController.swift */; };
 		1258D5B722CE51E10005474A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1258D5B622CE51E10005474A /* Assets.xcassets */; };
 		1258D5BA22CE51E10005474A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1258D5B822CE51E10005474A /* LaunchScreen.storyboard */; };
 		1258D5C522CE51E10005474A /* StudydriveChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5C422CE51E10005474A /* StudydriveChallengeTests.swift */; };
@@ -19,6 +19,8 @@
 		1258D5E922CE6FF70005474A /* MarketManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5E822CE6FF70005474A /* MarketManagerProtocol.swift */; };
 		1258D5EB22CE706B0005474A /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5EA22CE706B0005474A /* Consumer.swift */; };
 		1258D5ED22CE70C10005474A /* Producer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5EC22CE70C10005474A /* Producer.swift */; };
+		1258D5EF22CE81120005474A /* InfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5EE22CE81120005474A /* InfoLabel.swift */; };
+		1258D5F222CE857B0005474A /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1258D5F122CE857B0005474A /* Themes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,7 @@
 /* Begin PBXFileReference section */
 		1258D5AC22CE51DE0005474A /* StudydriveChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudydriveChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1258D5AF22CE51DE0005474A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1258D5B122CE51DE0005474A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1258D5B122CE51DE0005474A /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		1258D5B622CE51E10005474A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1258D5B922CE51E10005474A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1258D5BB22CE51E10005474A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		1258D5E822CE6FF70005474A /* MarketManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketManagerProtocol.swift; sourceTree = "<group>"; };
 		1258D5EA22CE706B0005474A /* Consumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumer.swift; sourceTree = "<group>"; };
 		1258D5EC22CE70C10005474A /* Producer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producer.swift; sourceTree = "<group>"; };
+		1258D5EE22CE81120005474A /* InfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabel.swift; sourceTree = "<group>"; };
+		1258D5F122CE857B0005474A /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1258D5AF22CE51DE0005474A /* AppDelegate.swift */,
+				1258D5F022CE855D0005474A /* Themes */,
 				1258D5E222CE60BE0005474A /* Helper */,
 				1258D5E722CE6FDA0005474A /* Protocols */,
 				1258D5DD22CE5FC60005474A /* Model */,
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				1258D5E022CE60080005474A /* MarketCell.swift */,
+				1258D5EE22CE81120005474A /* InfoLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,7 +165,7 @@
 		1258D5DF22CE5FD30005474A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1258D5B122CE51DE0005474A /* ViewController.swift */,
+				1258D5B122CE51DE0005474A /* MarketViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +184,14 @@
 				1258D5E822CE6FF70005474A /* MarketManagerProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1258D5F022CE855D0005474A /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				1258D5F122CE857B0005474A /* Themes.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,8 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1258D5B222CE51DE0005474A /* ViewController.swift in Sources */,
+				1258D5EF22CE81120005474A /* InfoLabel.swift in Sources */,
+				1258D5B222CE51DE0005474A /* MarketViewController.swift in Sources */,
 				1258D5E922CE6FF70005474A /* MarketManagerProtocol.swift in Sources */,
+				1258D5F222CE857B0005474A /* Themes.swift in Sources */,
 				1258D5E422CE60E80005474A /* HelperExtensions.swift in Sources */,
 				1258D5EB22CE706B0005474A /* Consumer.swift in Sources */,
 				1258D5E622CE62F20005474A /* Product.swift in Sources */,
