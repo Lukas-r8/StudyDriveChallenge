@@ -19,7 +19,8 @@ class Consumer {
     }
     
     func startConsuming(){
-        consumeTimer = Timer.scheduledTimer(withTimeInterval: 4, repeats: true, block: { (t) in
+        consumeTimer = Timer.scheduledTimer(withTimeInterval: 4, repeats: true, block: { [weak self] (t) in
+            guard let self = self else { return }
             self.delegate?.consumeProduct()
         })
         consumeTimer?.fire()

@@ -23,7 +23,8 @@ class Producer {
     }
     
     func startProduction(){
-        productionTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: { (t) in
+        productionTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: { [weak self] (t) in
+            guard let self = self else { return }
             let output = Product(producerId: self.producerID, productName: self.productsName.randomElement() ?? "None")
             self.delegate?.produceProduct(output)
         })
@@ -34,5 +35,8 @@ class Producer {
     func stopProduction(){
         productionTimer?.invalidate()
     }
-
+    
+    deinit {
+        print("DEINIT PRODUCER:", producerID)
+    }
 }

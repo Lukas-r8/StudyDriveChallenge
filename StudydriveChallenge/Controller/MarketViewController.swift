@@ -61,7 +61,6 @@ class MarketViewController: UIViewController {
         setUpViewAndConstraints()
     }
     
-    
  
     // buttons functions
     @objc func createProducer(_ sender: UIButton) {
